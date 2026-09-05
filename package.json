@@ -1,0 +1,15 @@
+{
+  "name": "developer-portfolio",
+  "version": "1.0.0",
+  "description": "Premium minimalist developer portfolio website",
+  "main": "app.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "update-stats": "node scrape.js"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

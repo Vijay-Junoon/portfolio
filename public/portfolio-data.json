@@ -1,0 +1,181 @@
+{
+  "personal": {
+    "name": "V Vijay",
+    "title": "Hi, I'm Vijay.",
+    "subtitle": "Aspiring Software Engineer",
+    "badge": "BTech Final Year Student",
+    "bio": "I build robust, scalable applications and thrive on solving complex algorithmic challenges. Currently seeking full-time opportunities.",
+    "about": "I am a final-year Computer Science engineering student with a deep curiosity for backend systems and data structures. My academic journey has been defined by a rigorous pursuit of technical excellence, focusing on practical problem-solving over theoretical memorization. I enjoy dissecting complex requirements and architecting elegant, maintainable code.",
+    "resumeUrl": "Resume_Vijay.pdf",
+    "socials": {
+      "github": "Vijay-Junoon",
+      "leetcode": "vijay_junoon",
+      "linkedin": "www.linkedin.com/in/vijay-developer",
+      "twitter": "#",
+      "email": "vijay262005@gmail.com"
+    }
+  },
+  "experience": [
+    {
+      "role": "AI/ ML Intern",
+      "company": "Gudsky Research Foundation",
+      "logoUrl": "/assets/images/logos/GudskyLOGO.jpg",
+      "companySub": "Section 8 Non-Profit · AI & Robotics R&D",
+      "companyUrl": "/",
+      "duration": "June 2026 - July 2026",
+      "points": [
+        "Involved in creating dataset for different anomaly detection systems.",
+        "Trained several different models to best predict the given anomaly.",
+        "Achieved an accuracy of 99%"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Junoon - Ilm",
+      "imageUrl": "public/junoon_ilm.png",
+      "description": "Junoon-Ilm is a minimalist, ultra-fast, developer-oriented personal educational command center and knowledge vault. It organizes links, notes, research papers, lecture series, and GitHub repositories across Machine Learning, Artificial Intelligence, Distributed Systems, Computer Science fundamentals, and engineering projects.",
+      "technologies": [
+        "Python",
+        "Flask",
+        "HTML",
+        "CSS",
+        "JS",
+        "PostgreSQL"
+      ],
+      "codeUrl": "https://github.com/Vijay-Junoon/junoon-ilm"
+    },
+    {
+      "title": "Opportunist",
+      "imageUrl": "public/opportunist.png",
+      "description": "Opportunist is a premium, high-contrast Forex Arbitrage Terminal designed to detect negative cycles in currency exchange rates and highlight risk-free profitable loops. It implements the Bellman-Ford Algorithm over log-transformed rates to transform triangular and polygonal trades into negative sum cycles.",
+      "technologies": [
+        "Python",
+        "Graphs",
+        "Flask"
+      ],
+      "codeUrl": "https://github.com/Vijay-Junoon/opportunist"
+    },
+    {
+      "title": "Investigo",
+      "imageUrl": "public/investigo.png",
+      "description": "Investigo is an autonomous, multi-agent AI research platform designed to automate deep information gathering, synthesis, and publication-grade report compilation. Given a single research query, Investigo decomposes the topic into distinct sub-topics, conducts parallel web searches, normalizes findings using distributed LLM agents, and compiles a comprehensive, academic-grade Markdown and PDF research dossier.",
+      "technologies": [
+        "Python",
+        "AgenticAI",
+        "Vectorization",
+        "LLM Calls",
+        "Redis"
+      ],
+      "codeUrl": "https://github.com/Vijay-Junoon/Investigo"
+    },
+    {
+      "title": "unClutter",
+      "imageUrl": "public/unclutter.png",
+      "description": "An AI-powered document organization system that automatically clusters and categorizes files using semantic similarity, enabling intelligent and efficient document management.",
+      "technologies": [
+        "Python",
+        "scikit-learn",
+        "Tkinter"
+      ],
+      "codeUrl": "https://github.com/Vijay-Junoon/unClutter"
+    },
+    {
+      "title": "Tehqeeq.AI",
+      "description": "An AI-powered Text-to-SQL application that translates natural language questions into SQL queries and retrieves accurate, structured insights from relational databases using vector embeddings and large language models.",
+      "technologies": [
+        "Python",
+        "PostgreSQL",
+        "Vector Embeddings",
+        "LLMs"
+      ],
+      "codeUrl": "https://github.com/Vijay-Junoon/textToSQL"
+    }
+  ],
+  "skills": {
+    "languages": [
+      "Python",
+      "JavaScript",
+      "SQL"
+    ],
+    "frameworks": [
+      "scikit-learn",
+      "tensorflow",
+      "pandas",
+      "langchain",
+      "langgraph"
+    ],
+    "tools": [
+      "Git & GitHub",
+      "Docker",
+      "MongoDB",
+      "PostgreSQL",
+      "MLFlow",
+      "DVC"
+    ]
+  },
+  "certifications": [
+    {
+      "id": "fsd",
+      "category": "Full Stack Development",
+      "badge": "FSD",
+      "icon": "code",
+      "items": [
+        {
+          "title": "HTML & CSS Complete Certificate",
+          "issuer": "Udemy",
+          "imageUrl": "certifications/FSD/udemy_HTMLCSS.jpg"
+        },
+        {
+          "title": "JavaScript Complete Certificate",
+          "issuer": "Udemy",
+          "imageUrl": "certifications/FSD/udemy_JS.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ml",
+      "category": "Machine Learning",
+      "badge": "ML",
+      "icon": "psychology",
+      "items": [
+        {
+          "title": "Machine Learning A-Z Certificate",
+          "issuer": "Udemy",
+          "imageUrl": "certifications/ML/udemy_MachineLearning.jpg"
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "leetcode": {
+      "solved": 517,
+      "easy": 232,
+      "medium": 253,
+      "hard": 32,
+      "totalQuestions": 4042,
+      "easyTotal": 962,
+      "mediumTotal": 2109,
+      "hardTotal": 971,
+      "ranking": "Top 5%"
+    },
+    "github": {
+      "contributionsYTD": 579,
+      "repos": 48,
+      "followers": 13
+    },
+    "codingHours": {
+      "total": "850+",
+      "languages": [
+        {
+          "name": "Python",
+          "percentage": 75
+        },
+        {
+          "name": "JavaScript",
+          "percentage": 25
+        }
+      ]
+    }
+  }
+}
