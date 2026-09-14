@@ -29,8 +29,8 @@
       <ul class="nav-links">
         <li><a href="#about" class="nav-link active">About</a></li>
         <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#ilm" class="nav-link">My Ilm</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#vault" class="nav-link">Knowledge Vault</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#certifications" class="nav-link">Certifications</a></li>
         <li><a href="#stats" class="nav-link">Stats</a></li>
@@ -59,8 +59,8 @@
       <ul class="mobile-nav-links">
         <li><a href="#about" class="mobile-nav-link">About</a></li>
         <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#ilm" class="mobile-nav-link">My Ilm</a></li>
         <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
-        <li><a href="#vault" class="mobile-nav-link">Knowledge Vault</a></li>
         <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
         <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
         <li><a href="#stats" class="mobile-nav-link">Stats</a></li>
@@ -138,33 +138,74 @@
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="section projects-section" id="projects">
-      <div class="section-container">
-        <div class="section-header">
-          <h2 class="section-title">Featured Projects</h2>
-          <div class="title-underline"></div>
-        </div>
-        <div class="projects-grid" id="projects-container">
-          <!-- Dynamically populated project cards -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Knowledge Vault Section (Junoon-e-Ilm) -->
-    <section class="section vault-section" id="vault">
+    <!-- My Ilm Section (Junoon-e-Ilm Knowledge Hub) -->
+    <section class="section vault-section" id="ilm">
       <div class="section-container">
         <div class="section-header">
           <div class="vault-header-badge-row">
-            <h2 class="section-title">Knowledge Vault</h2>
+            <h2 class="section-title">My Ilm</h2>
             <span class="vault-status-pill">
-              <span class="status-indicator-dot"></span> Live Resource Hub
+              <span class="status-indicator-dot"></span> Live &amp; 100% Free Knowledge Hub
             </span>
           </div>
           <p class="section-subtitle">
-            Curated educational command center featuring roadmaps, video lectures, and PDF notes across DSA, Machine Learning, and Computer Science.
+            A curated educational command center &amp; knowledge vault. Access handpicked study roadmaps, topic-wise video lectures, and in-depth PDF revision notes — all completely free.
           </p>
           <div class="title-underline"></div>
+        </div>
+
+        <!-- How to Access Resources for Free (Access Flow Guide) -->
+        <div class="vault-access-guide reveal">
+          <div class="vault-access-header">
+            <span class="material-symbols-outlined access-sparkle-icon">auto_awesome</span>
+            <div>
+              <h3 class="vault-access-title">How to Access All Resources for Free</h3>
+              <p class="vault-access-subtitle">Follow these 3 simple steps to start learning immediately without any barriers.</p>
+            </div>
+          </div>
+
+          <div class="vault-steps-grid" id="vault-steps-container">
+            <!-- Dynamically populated 3-step access guide -->
+            <div class="vault-step-card">
+              <div class="step-num-badge">01</div>
+              <div class="step-icon-wrap">
+                <span class="material-symbols-outlined">explore</span>
+              </div>
+              <h4 class="step-title">Choose Domain</h4>
+              <p class="step-desc">Browse curated roadmaps across DSA patterns, Machine Learning, Deep Learning, or Core CS.</p>
+            </div>
+
+            <div class="vault-step-card">
+              <div class="step-num-badge">02</div>
+              <div class="step-icon-wrap">
+                <span class="material-symbols-outlined">touch_app</span>
+              </div>
+              <h4 class="step-title">1-Click Direct Link</h4>
+              <p class="step-desc">Visit <strong class="highlight-link">junoon-ilm.vercel.app</strong> with zero paywalls, subscriptions, or sign-up walls.</p>
+            </div>
+
+            <div class="vault-step-card">
+              <div class="step-num-badge">03</div>
+              <div class="step-icon-wrap">
+                <span class="material-symbols-outlined">download_done</span>
+              </div>
+              <h4 class="step-title">Study &amp; Download</h4>
+              <p class="step-desc">Stream video lecture series topic-by-topic and download high-yield handwritten PDF notes for free.</p>
+            </div>
+          </div>
+
+          <!-- Free Guarantee Callout -->
+          <div class="vault-free-banner">
+            <div class="free-banner-icon">
+              <span class="material-symbols-outlined">verified</span>
+            </div>
+            <div class="free-banner-text">
+              <strong>100% Free &amp; Open Access:</strong> Every video playlist link, algorithmic problem roadmap, and downloadable PDF revision note on <em>Junoon-e-Ilm</em> is freely accessible for students and developers worldwide.
+            </div>
+            <a href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer" class="free-banner-btn">
+              <span>Open My Ilm ↗</span>
+            </a>
+          </div>
         </div>
 
         <!-- Flagship Vault Showcase Card -->
@@ -203,12 +244,12 @@
             <div class="vault-hero-content">
               <div class="vault-brand-header">
                 <span class="vault-badge-tag" id="vault-badge">JUNOON — Built with obsession.</span>
-                <h3 class="vault-main-heading" id="vault-title">Junoon-e-Ilm</h3>
-                <p class="vault-tagline" id="vault-tagline">Your personal knowledge vault &amp; learning hub.</p>
+                <h3 class="vault-main-heading" id="vault-title">My Ilm</h3>
+                <p class="vault-tagline" id="vault-tagline">Your personal knowledge vault &amp; accelerated learning hub.</p>
               </div>
 
               <p class="vault-description" id="vault-desc">
-                An ultra-fast, curated knowledge repository created to organize high-yield study roadmaps, video lectures, and in-depth PDF notes across Data Structures &amp; Algorithms, Machine Learning, AI Research, and Computer Science engineering.
+                An open, ultra-fast knowledge vault providing free access to handpicked video lectures, curated problem roadmaps, and in-depth PDF revision notes across DSA, Machine Learning, and Computer Science engineering.
               </p>
 
               <!-- Quick Metrics Strip -->
@@ -222,7 +263,7 @@
                   <span class="metric-label">Resource Types</span>
                 </div>
                 <div class="vault-metric-item">
-                  <span class="metric-value">Free &amp; Curated</span>
+                  <span class="metric-value">100% Free</span>
                   <span class="metric-label">Access</span>
                 </div>
               </div>
@@ -230,7 +271,7 @@
               <!-- Action Buttons -->
               <div class="vault-action-group">
                 <a href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer" class="button button-primary vault-cta-btn" id="vault-live-btn">
-                  <span>Launch Knowledge Vault</span>
+                  <span>Launch My Ilm (Free)</span>
                   <span class="material-symbols-outlined cta-arrow">arrow_outward</span>
                 </a>
                 <a href="https://github.com/Vijay-Junoon/junoon-ilm" target="_blank" rel="noopener noreferrer" class="button button-secondary vault-repo-btn" id="vault-code-btn">
@@ -246,13 +287,26 @@
         <div class="vault-pillars-section">
           <div class="vault-pillars-header">
             <h3 class="vault-pillars-heading">Curated Learning Pillars</h3>
-            <p class="vault-pillars-sub">Explore structured collections designed for conceptual depth and interview readiness.</p>
+            <p class="vault-pillars-sub">Click any pillar below to access roadmaps, video lectures, and PDF notes directly on My Ilm.</p>
           </div>
           <div class="vault-pillars-grid" id="vault-pillars-container">
             <!-- Dynamically populated resource category pillar cards -->
           </div>
         </div>
 
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects-section" id="projects">
+      <div class="section-container">
+        <div class="section-header">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="title-underline"></div>
+        </div>
+        <div class="projects-grid" id="projects-container">
+          <!-- Dynamically populated project cards -->
+        </div>
       </div>
     </section>
 

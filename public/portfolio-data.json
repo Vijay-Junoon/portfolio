@@ -180,17 +180,38 @@
     }
   },
   "knowledgeVault": {
-    "title": "Junoon - Ilm",
-    "badge": "Personal Knowledge Vault",
+    "title": "My Ilm",
+    "badge": "100% Free Knowledge Vault",
     "tagline": "Built with obsession. Your curated educational command center.",
-    "description": "An ultra-fast, curated knowledge repository created to organize high-yield study roadmaps, video lectures, and in-depth PDF notes across Data Structures & Algorithms, Machine Learning, AI Research, and Computer Science engineering.",
+    "description": "An open, ultra-fast knowledge vault providing free access to handpicked video lectures, curated problem roadmaps, and in-depth PDF revision notes across DSA, Machine Learning, and Computer Science engineering.",
     "liveUrl": "https://junoon-ilm.vercel.app/",
     "codeUrl": "https://github.com/Vijay-Junoon/junoon-ilm",
     "imageUrl": "public/junoon_ilm.png",
+    "freeGuarantee": "All resources, lecture playlists, and revision PDF notes on Junoon-e-Ilm are 100% free and open to everyone.",
     "stats": [
       { "label": "Core Domains", "value": "DSA & ML" },
       { "label": "Resource Types", "value": "Videos & Notes" },
-      { "label": "Access", "value": "Free & Curated" }
+      { "label": "Pricing", "value": "100% Free" }
+    ],
+    "accessSteps": [
+      {
+        "step": "01",
+        "icon": "explore",
+        "title": "Choose Domain",
+        "desc": "Browse curated roadmaps across DSA patterns, ML algorithms, or Core CS."
+      },
+      {
+        "step": "02",
+        "icon": "touch_app",
+        "title": "1-Click Direct Link",
+        "desc": "Visit junoon-ilm.vercel.app directly with no paywalls or required sign-up."
+      },
+      {
+        "step": "03",
+        "icon": "download_done",
+        "title": "Study & Download",
+        "desc": "Watch topic-wise video lectures & download handwritten PDF notes for free."
+      }
     ],
     "pillars": [
       {

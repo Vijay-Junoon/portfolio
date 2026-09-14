@@ -639,6 +639,25 @@ function renderKnowledgeVault(vault) {
     imgEl.src = imgPath;
   }
 
+  // Render Access Steps Guide
+  const stepsContainer = document.getElementById('vault-steps-container');
+  if (stepsContainer && vault.accessSteps && vault.accessSteps.length > 0) {
+    stepsContainer.innerHTML = '';
+    vault.accessSteps.forEach(st => {
+      const stepCard = document.createElement('div');
+      stepCard.className = 'vault-step-card';
+      stepCard.innerHTML = `
+        <div class="step-num-badge">${st.step}</div>
+        <div class="step-icon-wrap">
+          <span class="material-symbols-outlined">${st.icon || 'explore'}</span>
+        </div>
+        <h4 class="step-title">${st.title}</h4>
+        <p class="step-desc">${st.desc}</p>
+      `;
+      stepsContainer.appendChild(stepCard);
+    });
+  }
+
   // Render Metrics / Quick Stats
   if (metricsContainer && vault.stats && vault.stats.length > 0) {
     metricsContainer.innerHTML = '';
