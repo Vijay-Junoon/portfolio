@@ -30,10 +30,22 @@
       ]
     }
   ],
+  "currentWork": {
+    "sectionTitle": "Currently I'm working on:",
+    "title": "Primal",
+    "description": "An agent-based artificial life simulation modeling natural selection, genetic diversity, trait inheritance, and ecosystem dynamics in a 2D environment.",
+    "imageUrl": "primal.png",
+    "codeUrl": "https://github.com/Vijay-Junoon/evolve",
+    "technologies": [
+      "Python",
+      "Flask",
+      "JavaScript"
+    ]
+  },
   "projects": [
     {
       "title": "Junoon - Ilm",
-      "imageUrl": "public/junoon_ilm.png",
+      "imageUrl": "junoon_ilm.png",
       "description": "Junoon-Ilm is a minimalist, ultra-fast, developer-oriented personal educational command center and knowledge vault. It organizes links, notes, research papers, lecture series, and GitHub repositories across Machine Learning, Artificial Intelligence, Distributed Systems, Computer Science fundamentals, and engineering projects.",
       "technologies": [
         "Python",
@@ -48,7 +60,7 @@
     },
     {
       "title": "Opportunist",
-      "imageUrl": "public/opportunist.png",
+      "imageUrl": "opportunist.png",
       "description": "Opportunist is a premium, high-contrast Forex Arbitrage Terminal designed to detect negative cycles in currency exchange rates and highlight risk-free profitable loops. It implements the Bellman-Ford Algorithm over log-transformed rates to transform triangular and polygonal trades into negative sum cycles.",
       "technologies": [
         "Python",
@@ -59,7 +71,7 @@
     },
     {
       "title": "Investigo",
-      "imageUrl": "public/investigo.png",
+      "imageUrl": "investigo.png",
       "description": "Investigo is an autonomous, multi-agent AI research platform designed to automate deep information gathering, synthesis, and publication-grade report compilation. Given a single research query, Investigo decomposes the topic into distinct sub-topics, conducts parallel web searches, normalizes findings using distributed LLM agents, and compiles a comprehensive, academic-grade Markdown and PDF research dossier.",
       "technologies": [
         "Python",
@@ -72,7 +84,7 @@
     },
     {
       "title": "unClutter",
-      "imageUrl": "public/unclutter.png",
+      "imageUrl": "unclutter.png",
       "description": "An AI-powered document organization system that automatically clusters and categorizes files using semantic similarity, enabling intelligent and efficient document management.",
       "technologies": [
         "Python",
@@ -158,7 +170,24 @@
       "easyTotal": 962,
       "mediumTotal": 2109,
       "hardTotal": 971,
-      "ranking": "Top 5%"
+      "ranking": "Top 5%",
+      "skills": {
+        "advanced": [
+          { "name": "Dynamic Programming", "count": 58 },
+          { "name": "Backtracking", "count": 25 },
+          { "name": "Divide and Conquer", "count": 17 }
+        ],
+        "intermediate": [
+          { "name": "Hash Table", "count": 100 },
+          { "name": "Math", "count": 69 },
+          { "name": "Tree", "count": 67 }
+        ],
+        "fundamental": [
+          { "name": "Array", "count": 252 },
+          { "name": "String", "count": 114 },
+          { "name": "Two Pointers", "count": 82 }
+        ]
+      }
     },
     "github": {
       "contributionsYTD": 579,
@@ -186,7 +215,7 @@
     "description": "An open, ultra-fast knowledge vault providing free access to handpicked video lectures, curated problem roadmaps, and in-depth PDF revision notes across DSA, Machine Learning, and Computer Science engineering.",
     "liveUrl": "https://junoon-ilm.vercel.app/",
     "codeUrl": "https://github.com/Vijay-Junoon/junoon-ilm",
-    "imageUrl": "public/junoon_ilm.png",
+    "imageUrl": "junoon_ilm.png",
     "freeGuarantee": "All resources, lecture playlists, and revision PDF notes on Junoon-e-Ilm are 100% free and open to everyone.",
     "stats": [
       { "label": "Core Domains", "value": "DSA & ML" },

@@ -1,487 +1,1037 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Minimalist Developer Portfolio</title>
-  <!-- Google Fonts: Geist for Headlines, Inter for Body, JetBrains Mono for Code -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>V Vijay | Portfolio</title>
+  <meta name="description" content="Portfolio of V Vijay — Aspiring Software Engineer specializing in backend systems, algorithmic problem solving, machine learning, and scalable architectures." />
+  
+  <!-- Fonts: Syne (Headlines), Inter & Geist (Body), JetBrains Mono (Technical Telemetry) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@500;600;700;800&display=swap"
-    rel="stylesheet">
-  <!-- Material Symbols Outlined -->
+    href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@500;600;700;800&display=swap"
+    rel="stylesheet" />
   <link
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     rel="stylesheet" />
-  <link rel="stylesheet" href="./style.css">
+  
+  <link rel="stylesheet" href="./style.css" />
 </head>
 
-<body class="light-mode">
+<body>
+  <!-- Precision Technical Cursor (Desktop) -->
+  <div id="custom-cursor-dot"></div>
+  <div id="custom-cursor-ring"></div>
 
-  <!-- Header / Navigation -->
-  <header class="navbar-header">
-    <nav class="navbar-container">
-      <a href="#" class="navbar-logo" id="logo-text">Portfolio</a>
+  <!-- Top Progress Scroll Meter -->
+  <div id="scroll-meter" aria-hidden="true">
+    <div id="scroll-meter-fill"></div>
+  </div>
 
-      <!-- Desktop Navigation Menu -->
-      <ul class="nav-links">
-        <li><a href="#about" class="nav-link active">About</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
-        <li><a href="#ilm" class="nav-link">My Ilm</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#certifications" class="nav-link">Certifications</a></li>
-        <li><a href="#stats" class="nav-link">Stats</a></li>
-      </ul>
+  <!-- Technical Header & Telemetry Navigation -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-telemetry">
+        <a href="#hero" class="brand-logo" id="logo-text">V VIJAY</a>
+      </div>
 
-      <div class="nav-actions">
-        <!-- Light/Dark Mode Toggle Button -->
-        <button id="theme-toggle" class="icon-button" aria-label="Toggle dark/light mode">
-          <span class="material-symbols-outlined theme-icon">dark_mode</span>
-        </button>
+      <!-- Desktop Telemetry Nav -->
+      <nav class="desktop-nav" id="main-nav">
+        <a href="#about" class="nav-anchor active" data-path="about">ABOUT</a>
+        <a href="#experience" class="nav-anchor" data-path="experience">EXPERIENCE</a>
+        <a href="#current-work" class="nav-anchor" data-path="current-work">WORKING ON</a>
+        <a href="#ilm" class="nav-anchor" data-path="ilm">MY ILM</a>
+        <a href="#projects" class="nav-anchor" data-path="projects">PROJECTS</a>
+        <a href="#skills" class="nav-anchor" data-path="skills">SKILLS</a>
+        <a href="#stats" class="nav-anchor" data-path="stats">STATS</a>
+        <a href="#certifications" class="nav-anchor" data-path="certifications">CERTS</a>
+        <a href="#contact" class="nav-anchor" data-path="contact">CONTACT</a>
+      </nav>
 
-        <!-- Resume Button -->
-        <a id="resume-btn" class="button button-primary resume-desktop" href="#" target="_blank">
-          Resume
+      <div class="header-right-actions">
+        <a id="resume-btn" class="header-btn btn-resume" href="Resume_Vijay.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="accent-teal-text">[&gt;]</span>
+          <span>RESUME</span>
         </a>
-
-        <!-- Mobile Menu Toggle Button -->
-        <button id="mobile-menu-toggle" class="icon-button mobile-only" aria-label="Toggle menu">
+        <a id="header-contact-btn" class="header-btn btn-contact" href="mailto:vijay262005@gmail.com">
+          <span>CONTACT</span>
+        </a>
+        <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle navigation drawer">
           <span class="material-symbols-outlined">menu</span>
         </button>
       </div>
-    </nav>
+    </div>
 
     <!-- Mobile Navigation Drawer -->
-    <div id="mobile-drawer" class="mobile-drawer">
-      <ul class="mobile-nav-links">
-        <li><a href="#about" class="mobile-nav-link">About</a></li>
-        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
-        <li><a href="#ilm" class="mobile-nav-link">My Ilm</a></li>
-        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
-        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
-        <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
-        <li><a href="#stats" class="mobile-nav-link">Stats</a></li>
-        <li><a id="resume-btn-mobile" class="button button-primary w-full text-center" href="#"
-            target="_blank">Resume</a></li>
-      </ul>
+    <div id="mobile-drawer" class="mobile-nav-drawer">
+      <a href="#about" class="mobile-nav-anchor">ABOUT</a>
+      <a href="#experience" class="mobile-nav-anchor">EXPERIENCE</a>
+      <a href="#current-work" class="mobile-nav-anchor">WORKING ON</a>
+      <a href="#ilm" class="mobile-nav-anchor">MY ILM</a>
+      <a href="#projects" class="mobile-nav-anchor">PROJECTS</a>
+      <a href="#skills" class="mobile-nav-anchor">SKILLS</a>
+      <a href="#stats" class="mobile-nav-anchor">STATS</a>
+      <a href="#certifications" class="mobile-nav-anchor">CERTS</a>
+      <a href="#contact" class="mobile-nav-anchor">CONTACT</a>
     </div>
   </header>
 
-  <main class="main-content">
-    <!-- Hero Section -->
+  <main class="site-main">
+    <!-- ================================================================= -->
+    <!-- 00 // HERO: MATHEMATICAL POSTER & INTERACTIVE VECTOR FIELD        -->
+    <!-- ================================================================= -->
     <section class="hero-section" id="hero">
-      <div class="hero-container">
-        <div class="hero-content">
-          <div class="badge-container">
-            <span class="badge" id="hero-badge">Loading...</span>
-          </div>
-          <h1 class="hero-title" id="hero-title">
-            Hi, I'm <span class="highlight">Developer</span>
-          </h1>
-          <p class="hero-subtitle" id="hero-subtitle">Loading title...</p>
-          <p class="hero-bio" id="hero-bio">
-            Loading biography...
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="button button-primary">View Projects</a>
-            <a href="mailto:example@example.com" id="hero-contact-btn" class="button button-secondary">Contact Me</a>
-          </div>
-        </div>
+      <!-- Interactive Background Physics Canvas -->
+      <canvas id="hero-canvas"></canvas>
 
-        <!-- Decorative glowing orb and portrait -->
-        <div class="hero-glow-container" id="hero-avatar-container">
-          <div class="glowing-orb"></div>
+      <!-- Monumental Typography -->
+      <div class="hero-center-content">
+        <div class="hero-manifesto-sub">
+          <span class="hero-sub-dash">—</span>
+          <span id="hero-badge">BTECH FINAL YEAR STUDENT // COMPUTER SCIENCE</span>
+        </div>
+        <h1 class="hero-monumental-name" id="hero-title">
+          HI, I'M VIJAY.
+        </h1>
+        <div class="hero-domain-title" id="hero-subtitle">
+          ASPIRING SOFTWARE ENGINEER
+        </div>
+        <div class="hero-bio-narrative" id="hero-bio">
+          I build robust, scalable applications and thrive on solving complex algorithmic challenges. Currently seeking full-time opportunities.
         </div>
       </div>
 
-      <!-- Scroll Indicator -->
-      <div class="scroll-indicator">
-        <a href="#about" aria-label="Scroll to About Me">
-          <span class="material-symbols-outlined scroll-arrow">keyboard_double_arrow_down</span>
-        </a>
+      <!-- Bottom Actions & Coordinates -->
+      <div class="hero-bottom-actions-row">
+        <div class="hero-action-links">
+          <a class="hero-action-link" href="#projects">
+            <span class="accent-amber-text">↓</span>
+            <span>[VIEW PROJECTS]</span>
+          </a>
+          <a class="hero-action-link" href="mailto:vijay262005@gmail.com">
+            <span class="accent-teal-text">✉</span>
+            <span>[CONTACT ME]</span>
+          </a>
+          <a class="hero-action-link" href="Resume_Vijay.pdf" target="_blank" rel="noopener noreferrer">
+            <span>[RESUME ↗]</span>
+          </a>
+          <a class="hero-action-link" href="https://github.com/Vijay-Junoon" target="_blank" rel="noopener noreferrer">
+            <span>[GITHUB: @VIJAY-JUNOON]</span>
+          </a>
+        </div>
+        <div class="hero-meta-badge">
+          <span class="stat-gray-text">LEETCODE TOP 5%</span>
+          <span class="stat-dot-sep">·</span>
+          <span class="accent-amber-text">500+ PROBLEMS SOLVED</span>
+        </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="section about-section" id="about">
-      <div class="section-container">
-        <div class="section-header">
-          <h2 class="section-title">About Me</h2>
-          <div class="title-underline"></div>
+    <!-- ================================================================= -->
+    <!-- 01 // ABOUT ME                                                    -->
+    <!-- ================================================================= -->
+    <section class="atelier-section" id="about">
+      <div class="section-grid">
+        <!-- Asymmetric Left Index -->
+        <div class="section-index-col">
+          <div>
+            <span class="section-big-index">01</span>
+            <span class="section-tag-label">// ABOUT</span>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 11px; color: var(--outline); padding-top: 2rem;">
+            <p>NAME: V VIJAY</p>
+            <p style="margin-top: 4px">FOCUS: BACKEND &amp; ALGORITHMS</p>
+            <p style="margin-top: 4px">STATUS: OPEN FOR ROLES</p>
+          </div>
         </div>
-        <div class="about-grid">
-          <div class="about-description">
-            <p id="about-text">
-              Loading about text...
+
+        <!-- Core Editorial Narrative -->
+        <div class="about-main-col">
+          <h2 class="about-headline">
+            DISSECTING COMPLEX REQUIREMENTS &amp; ARCHITECTING MAINTAINABLE CODE.
+          </h2>
+          <div class="about-paragraphs" id="about-text-container">
+            <p>
+              I am a final-year Computer Science engineering student with a deep curiosity for backend systems and data structures. My academic journey has been defined by a rigorous pursuit of technical excellence, focusing on practical problem-solving over theoretical memorization. I enjoy dissecting complex requirements and architecting elegant, maintainable code.
+            </p>
+            <p>
+              I build robust, scalable applications and thrive on solving complex algorithmic challenges. Whether working on multi-agent evolutionary simulations, graph-theoretic arbitrage detection, or distributed knowledge vaults, I focus on clean design, algorithmic rigour, and high performance.
             </p>
           </div>
-          <div class="about-highlights" id="about-highlights-container">
-            <!-- Dynamically populated Highlights cards -->
+        </div>
+
+        <!-- Right Column: Focus Areas -->
+        <div class="about-vectors-col">
+          <div>
+            <span class="vectors-title">[CORE COMPETENCIES]</span>
+            <ul class="vectors-list">
+              <li><span class="vector-glyph">›</span><span>Backend Systems &amp; API Architecture</span></li>
+              <li><span class="vector-glyph">›</span><span>Data Structures &amp; Algorithmic Rigour</span></li>
+              <li><span class="vector-glyph">›</span><span>Machine Learning &amp; Anomaly Detection</span></li>
+              <li><span class="vector-glyph">›</span><span>Multi-Agent Simulation &amp; Optimization</span></li>
+              <li><span class="vector-glyph">›</span><span>Open Educational Repositories</span></li>
+            </ul>
+          </div>
+          <div class="creed-box">
+            <span class="creed-title">ENGINEERING PHILOSOPHY:</span>
+            "Focus on practical problem-solving over theoretical memorization to build robust and maintainable software."
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="section experience-section" id="experience">
-      <div class="section-container">
-        <div class="section-header">
-          <h2 class="section-title">Work Experience</h2>
-          <div class="title-underline"></div>
+    <!-- ================================================================= -->
+    <!-- 02 // WORK EXPERIENCE                                             -->
+    <!-- ================================================================= -->
+    <section class="atelier-section" id="experience">
+      <div class="section-grid" style="margin-bottom: 2rem">
+        <div class="section-index-col">
+          <span class="section-big-index">02</span>
+          <span class="section-tag-label">// EXPERIENCE</span>
         </div>
-        <div class="timeline-container" id="experience-timeline">
-          <!-- Dynamically populated work experience timeline -->
+        <div style="grid-column: span 9">
+          <h2 class="section-header-title">
+            WORK EXPERIENCE
+          </h2>
+          <p class="section-header-sub">Professional engineering and research roles.</p>
         </div>
       </div>
-    </section>
 
-    <!-- My Ilm Section (Junoon-e-Ilm Knowledge Hub) -->
-    <section class="section vault-section" id="ilm">
-      <div class="section-container">
-        <div class="section-header">
-          <div class="vault-header-badge-row">
-            <h2 class="section-title">My Ilm</h2>
-            <span class="vault-status-pill">
-              <span class="status-indicator-dot"></span> Live &amp; 100% Free Knowledge Hub
-            </span>
+      <!-- Timeline Stream -->
+      <div class="timeline-stream" id="experience-timeline">
+        <!-- Experience Entry: Gudsky Research Foundation -->
+        <div class="timeline-entry">
+          <span class="timeline-node-dot"></span>
+          <div class="timeline-meta-row">
+            <span class="timeline-date">JUNE 2026 — JULY 2026</span>
+            <span class="timeline-role-tag">[ROLE: AI/ ML INTERN]</span>
           </div>
-          <p class="section-subtitle">
-            A curated educational command center &amp; knowledge vault. Access handpicked study roadmaps, topic-wise video lectures, and in-depth PDF revision notes — all completely free.
-          </p>
-          <div class="title-underline"></div>
-        </div>
-
-        <!-- How to Access Resources for Free (Access Flow Guide) -->
-        <div class="vault-access-guide reveal">
-          <div class="vault-access-header">
-            <span class="material-symbols-outlined access-sparkle-icon">auto_awesome</span>
+          <div class="timeline-header-with-logo">
+            <img src="/assets/images/logos/GudskyLOGO.jpg" alt="Gudsky Research Foundation Logo" class="experience-company-logo" onerror="this.style.display='none'" />
             <div>
-              <h3 class="vault-access-title">How to Access All Resources for Free</h3>
-              <p class="vault-access-subtitle">Follow these 3 simple steps to start learning immediately without any barriers.</p>
+              <h3 class="timeline-entry-title">GUDSKY RESEARCH FOUNDATION</h3>
+              <span class="timeline-company-name">Section 8 Non-Profit · AI &amp; Robotics R&amp;D</span>
             </div>
           </div>
-
-          <div class="vault-steps-grid" id="vault-steps-container">
-            <!-- Dynamically populated 3-step access guide -->
-            <div class="vault-step-card">
-              <div class="step-num-badge">01</div>
-              <div class="step-icon-wrap">
-                <span class="material-symbols-outlined">explore</span>
-              </div>
-              <h4 class="step-title">Choose Domain</h4>
-              <p class="step-desc">Browse curated roadmaps across DSA patterns, Machine Learning, Deep Learning, or Core CS.</p>
-            </div>
-
-            <div class="vault-step-card">
-              <div class="step-num-badge">02</div>
-              <div class="step-icon-wrap">
-                <span class="material-symbols-outlined">touch_app</span>
-              </div>
-              <h4 class="step-title">1-Click Direct Link</h4>
-              <p class="step-desc">Visit <strong class="highlight-link">junoon-ilm.vercel.app</strong> with zero paywalls, subscriptions, or sign-up walls.</p>
-            </div>
-
-            <div class="vault-step-card">
-              <div class="step-num-badge">03</div>
-              <div class="step-icon-wrap">
-                <span class="material-symbols-outlined">download_done</span>
-              </div>
-              <h4 class="step-title">Study &amp; Download</h4>
-              <p class="step-desc">Stream video lecture series topic-by-topic and download high-yield handwritten PDF notes for free.</p>
-            </div>
-          </div>
-
-          <!-- Free Guarantee Callout -->
-          <div class="vault-free-banner">
-            <div class="free-banner-icon">
-              <span class="material-symbols-outlined">verified</span>
-            </div>
-            <div class="free-banner-text">
-              <strong>100% Free &amp; Open Access:</strong> Every video playlist link, algorithmic problem roadmap, and downloadable PDF revision note on <em>Junoon-e-Ilm</em> is freely accessible for students and developers worldwide.
-            </div>
-            <a href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer" class="free-banner-btn">
-              <span>Open My Ilm ↗</span>
-            </a>
+          <ul class="experience-bullet-list">
+            <li>Involved in creating dataset for different anomaly detection systems.</li>
+            <li>Trained several different models to best predict the given anomaly.</li>
+            <li>Achieved an accuracy of 99%.</li>
+          </ul>
+          <div class="timeline-tags-strip">
+            <span class="timeline-tag">Machine Learning</span>
+            <span class="timeline-tag">Anomaly Detection</span>
+            <span class="timeline-tag">Dataset Pipelines</span>
+            <span class="timeline-tag">Scikit-learn</span>
+            <span class="timeline-tag" style="color: var(--primary); border-color: var(--primary)">99% Accuracy</span>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Flagship Vault Showcase Card -->
-        <div class="vault-hero-card reveal" id="vault-hero-card">
-          <div class="vault-hero-layout">
-            <!-- Browser Mockup Window -->
-            <div class="vault-browser-frame">
-              <div class="vault-browser-header">
-                <div class="browser-dots">
-                  <span class="browser-dot dot-red"></span>
-                  <span class="browser-dot dot-yellow"></span>
-                  <span class="browser-dot dot-green"></span>
-                </div>
-                <div class="browser-address-bar">
-                  <span class="material-symbols-outlined address-lock-icon">lock</span>
-                  <span class="address-url">junoon-ilm.vercel.app</span>
-                </div>
-                <div class="browser-actions">
-                  <a href="https://junoon-ilm.vercel.app/" target="_blank" class="browser-external-link" aria-label="Open Junoon-e-Ilm in new tab">
-                    <span class="material-symbols-outlined">open_in_new</span>
-                  </a>
-                </div>
-              </div>
-              <div class="vault-browser-body">
-                <a href="https://junoon-ilm.vercel.app/" target="_blank" class="vault-img-link" aria-label="Visit Junoon-Ilm Live">
-                  <img src="./junoon_ilm.png" alt="Junoon-Ilm Knowledge Vault Interface" class="vault-preview-img" loading="lazy" />
-                  <div class="vault-img-overlay">
-                    <span class="material-symbols-outlined">launch</span>
-                    <span>Explore junoon-ilm.vercel.app</span>
-                  </div>
-                </a>
-              </div>
+    <!-- ================================================================= -->
+    <!-- 03 // CURRENTLY I'M WORKING ON: (PRIMAL SHOWCASE)                 -->
+    <!-- ================================================================= -->
+    <section class="atelier-section" id="current-work">
+      <div class="section-grid" style="margin-bottom: 2rem">
+        <div class="section-index-col">
+          <span class="section-big-index">03</span>
+          <span class="section-tag-label">// WORKING ON</span>
+        </div>
+        <div style="grid-column: span 9; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 1rem;">
+          <div>
+            <h2 class="section-header-title">CURRENTLY I'M WORKING ON:</h2>
+            <p class="section-header-sub">Active engineering spotlight and simulation project.</p>
+          </div>
+          <div class="sys-status-badge">
+            <span class="status-dot status-blink"></span>
+            <span class="accent-amber-text">STATUS: IN ACTIVE DEVELOPMENT</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Primal Showcase Card with Image -->
+      <div class="working-spotlight-card">
+        <div class="working-spotlight-grid">
+          <!-- Project Image Frame -->
+          <div class="working-image-wrapper">
+            <img src="primal.png" alt="Primal Simulation Project Preview" class="working-project-img" />
+            <div class="working-img-badge">
+              <span class="status-dot status-blink"></span>
+              <span>2D ECOSYSTEM SIMULATION</span>
             </div>
+          </div>
 
-            <!-- Vault Details & CTAs -->
-            <div class="vault-hero-content">
-              <div class="vault-brand-header">
-                <span class="vault-badge-tag" id="vault-badge">JUNOON — Built with obsession.</span>
-                <h3 class="vault-main-heading" id="vault-title">My Ilm</h3>
-                <p class="vault-tagline" id="vault-tagline">Your personal knowledge vault &amp; accelerated learning hub.</p>
+          <!-- Project Details -->
+          <div class="working-details-col">
+            <div class="working-meta-top">
+              <span class="accent-amber-text">[FLAGSHIP EXPERIMENT]</span>
+              <span style="color: var(--outline)">STATUS: RUNNING</span>
+            </div>
+            <h3 class="working-project-title">PRIMAL</h3>
+            <p class="working-project-desc">
+              An agent-based artificial life simulation modeling natural selection, genetic diversity, trait inheritance, and ecosystem dynamics in a 2D environment.
+            </p>
+            <div class="working-tech-pills">
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">Flask</span>
+              <span class="timeline-tag">JavaScript</span>
+              <span class="timeline-tag">HTML5 Canvas</span>
+            </div>
+            <div class="working-actions-row">
+              <a class="btn-launch-vault" href="https://github.com/Vijay-Junoon/evolve" target="_blank" rel="noopener noreferrer">
+                <span class="material-symbols-outlined" style="font-size: 16px">code</span>
+                <span>VIEW ON GITHUB</span>
+              </a>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: var(--outline)">
+                REPO: @Vijay-Junoon/evolve
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 04 // MY ILM: KNOWLEDGE VAULT                                     -->
+    <!-- ================================================================= -->
+    <section class="atelier-section" id="ilm">
+      <div class="section-grid" style="margin-bottom: 2rem">
+        <div class="section-index-col">
+          <span class="section-big-index">04</span>
+          <span class="section-tag-label">// MY ILM</span>
+        </div>
+        <div style="grid-column: span 9">
+          <div class="vault-top-actions">
+            <div>
+              <div class="vault-badge-pill">
+                <span class="material-symbols-outlined" style="font-size: 14px; color: var(--primary)">verified</span>
+                <span>100% FREE KNOWLEDGE VAULT</span>
               </div>
-
-              <p class="vault-description" id="vault-desc">
+              <h2 class="vault-monumental-title">MY ILM</h2>
+              <div class="vault-subtitle">BUILT WITH OBSESSION. YOUR CURATED EDUCATIONAL COMMAND CENTER.</div>
+              <p style="font-family: var(--font-body); font-size: 15px; color: var(--text-secondary); max-width: 720px; margin-top: 10px; line-height: 1.7;">
                 An open, ultra-fast knowledge vault providing free access to handpicked video lectures, curated problem roadmaps, and in-depth PDF revision notes across DSA, Machine Learning, and Computer Science engineering.
               </p>
-
-              <!-- Quick Metrics Strip -->
-              <div class="vault-metrics-row" id="vault-metrics">
-                <div class="vault-metric-item">
-                  <span class="metric-value">DSA &amp; ML</span>
-                  <span class="metric-label">Core Domains</span>
-                </div>
-                <div class="vault-metric-item">
-                  <span class="metric-value">Videos &amp; PDFs</span>
-                  <span class="metric-label">Resource Types</span>
-                </div>
-                <div class="vault-metric-item">
-                  <span class="metric-value">100% Free</span>
-                  <span class="metric-label">Access</span>
-                </div>
-              </div>
-
-              <!-- Action Buttons -->
-              <div class="vault-action-group">
-                <a href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer" class="button button-primary vault-cta-btn" id="vault-live-btn">
-                  <span>Launch My Ilm (Free)</span>
-                  <span class="material-symbols-outlined cta-arrow">arrow_outward</span>
-                </a>
-                <a href="https://github.com/Vijay-Junoon/junoon-ilm" target="_blank" rel="noopener noreferrer" class="button button-secondary vault-repo-btn" id="vault-code-btn">
-                  <span class="material-symbols-outlined">code</span>
-                  <span>View Repository</span>
-                </a>
-              </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Resource Category Pillars Grid -->
-        <div class="vault-pillars-section">
-          <div class="vault-pillars-header">
-            <h3 class="vault-pillars-heading">Curated Learning Pillars</h3>
-            <p class="vault-pillars-sub">Click any pillar below to access roadmaps, video lectures, and PDF notes directly on My Ilm.</p>
-          </div>
-          <div class="vault-pillars-grid" id="vault-pillars-container">
-            <!-- Dynamically populated resource category pillar cards -->
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="section projects-section" id="projects">
-      <div class="section-container">
-        <div class="section-header">
-          <h2 class="section-title">Featured Projects</h2>
-          <div class="title-underline"></div>
-        </div>
-        <div class="projects-grid" id="projects-container">
-          <!-- Dynamically populated project cards -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section skills-section" id="skills">
-      <div class="section-container">
-        <div class="section-header">
-          <h2 class="section-title">Skills & Technologies</h2>
-          <div class="title-underline"></div>
-        </div>
-        <div class="skills-grid" id="skills-container">
-          <!-- Dynamically populated skills sub-categories -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section class="section certifications-section" id="certifications">
-      <div class="section-container">
-        <div class="section-header">
-          <h2 class="section-title">Certifications</h2>
-          <div class="title-underline"></div>
-        </div>
-
-        <!-- Filter Tab Pill Switcher -->
-        <div class="cert-tabs-wrapper">
-          <div class="cert-tabs-bar" id="cert-tabs-container">
-            <!-- Dynamically populated tab buttons -->
-          </div>
-        </div>
-
-        <!-- Tab Content Display Grid -->
-        <div class="cert-content-wrapper" id="cert-content-container">
-          <!-- Dynamically populated certificate cards -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Stats Bento Section -->
-    <section class="section stats-section" id="stats">
-      <div class="section-container">
-        <div class="section-header">
-          <h2 class="section-title">Technical Statistics</h2>
-          <div class="title-underline"></div>
-        </div>
-        <div class="bento-grid">
-
-          <!-- LeetCode Card -->
-          <div class="bento-card leetcode-card animate-card">
-            <div class="bento-card-header">
-              <div class="bento-card-title-group">
-                <span class="material-symbols-outlined leetcode-icon">code</span>
-                <h3>LeetCode</h3>
-              </div>
-              <span class="badge" id="leetcode-ranking">Top 5%</span>
-            </div>
-
-            <div class="leetcode-content">
-              <div class="progress-ring-container">
-                <svg class="progress-ring" viewBox="0 0 100 100">
-                  <circle class="progress-ring-bg" cx="50" cy="50" r="40"></circle>
-                  <circle class="progress-ring-fill-circle" cx="50" cy="50" r="40" id="lc-progress-circle"></circle>
-                </svg>
-                <div class="progress-ring-text">
-                  <span class="solved-number" id="lc-solved-num">0</span>
-                  <span class="solved-label">Solved</span>
-                </div>
-              </div>
-
-              <div class="leetcode-bars-container">
-                <!-- Easy -->
-                <div class="stat-progress-bar-group">
-                  <div class="bar-label-group">
-                    <span class="easy-label">Easy</span>
-                    <span class="bar-value" id="lc-easy-count">0/0</span>
-                  </div>
-                  <div class="bar-track">
-                    <div class="bar-fill easy-fill" id="lc-easy-bar" style="width: 0%"></div>
-                  </div>
-                </div>
-
-                <!-- Medium -->
-                <div class="stat-progress-bar-group">
-                  <div class="bar-label-group">
-                    <span class="med-label">Medium</span>
-                    <span class="bar-value" id="lc-med-count">0/0</span>
-                  </div>
-                  <div class="bar-track">
-                    <div class="bar-fill med-fill" id="lc-med-bar" style="width: 0%"></div>
-                  </div>
-                </div>
-
-                <!-- Hard -->
-                <div class="stat-progress-bar-group">
-                  <div class="bar-label-group">
-                    <span class="hard-label">Hard</span>
-                    <span class="bar-value" id="lc-hard-count">0/0</span>
-                  </div>
-                  <div class="bar-track">
-                    <div class="bar-fill hard-fill" id="lc-hard-bar" style="width: 0%"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- GitHub Card -->
-          <div class="bento-card github-card animate-card">
-            <div class="bento-card-header">
-              <div class="bento-card-title-group">
-                <span class="material-symbols-outlined github-icon">terminal</span>
-                <h3>GitHub Stats</h3>
-              </div>
-              <a href="#" class="github-profile-link" id="github-link" target="_blank"
-                aria-label="Visit GitHub Profile">
-                <span class="material-symbols-outlined">open_in_new</span>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+              <a class="btn-launch-vault" href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <span>LAUNCH MY ILM (FREE)</span>
+                <span class="material-symbols-outlined" style="font-size: 16px">arrow_outward</span>
+              </a>
+              <a class="btn-secondary-link" href="https://github.com/Vijay-Junoon/junoon-ilm" target="_blank" rel="noopener noreferrer">
+                <span>[VIEW REPOSITORY ↗]</span>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="github-content">
-              <div class="github-stats-grid">
-                <div class="github-stat-box">
-                  <span class="stat-name">Contributions (YTD)</span>
-                  <span class="stat-big-number" id="github-contrib-ytd">0</span>
+      <!-- Showcase Banner with Real Image -->
+      <div class="vault-hero-preview-frame">
+        <img src="junoon_ilm.png" alt="Junoon Ilm Knowledge Vault Preview" class="vault-preview-img" />
+        <div class="vault-preview-overlay">
+          <div class="vault-overlay-badge">
+            <span class="status-dot status-blink"></span>
+            <span>LIVE WEB APP: junoon-ilm.vercel.app</span>
+          </div>
+          <a class="btn-overlay-launch" href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer">
+            EXPLORE PLATFORM ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 Simple Steps Access Flow -->
+      <div class="access-steps-wrapper">
+        <div class="access-steps-header">
+          <span class="accent-amber-text">// HOW TO ACCESS ALL RESOURCES FOR FREE</span>
+          <span style="color: var(--outline)">3 SIMPLE STEPS · ZERO PAYWALLS</span>
+        </div>
+        <div class="access-steps-grid">
+          <div class="step-card">
+            <div class="step-num">[01]</div>
+            <h4 class="step-title">Choose Domain</h4>
+            <p class="step-desc">Browse curated roadmaps across DSA patterns, Machine Learning, Deep Learning, or Core CS.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">[02]</div>
+            <h4 class="step-title">1-Click Direct Link</h4>
+            <p class="step-desc">Visit junoon-ilm.vercel.app directly with no paywalls, subscriptions, or sign-up walls.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num">[03]</div>
+            <h4 class="step-title">Study &amp; Download</h4>
+            <p class="step-desc">Stream video lecture series topic-by-topic and download high-yield handwritten PDF notes for free.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 Curated Learning Pillars -->
+      <div class="vault-pillars-section">
+        <div class="pillars-section-title">// CURATED LEARNING PILLARS</div>
+        <div class="vault-clusters-grid" id="vault-pillars-container">
+          <!-- Pillar 1 -->
+          <div class="vault-cluster-card">
+            <div>
+              <div class="cluster-meta-top">
+                <span>PILLAR_01</span>
+                <span>DSA</span>
+              </div>
+              <h3 class="cluster-title">Data Structures &amp; Algorithms</h3>
+              <p class="cluster-desc">
+                Comprehensive algorithmic patterns, topic-wise curated problem sheets, time/space complexity cheat sheets, and LeetCode problem trackers.
+              </p>
+              <div class="cluster-tags-wrap">
+                <span class="timeline-tag">Pattern Sheets</span>
+                <span class="timeline-tag">LeetCode Curations</span>
+                <span class="timeline-tag">Complexity Maps</span>
+              </div>
+            </div>
+            <div class="cluster-node-footer">
+              <a href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer" class="accent-teal-text">OPEN ON MY ILM ↗</a>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="vault-cluster-card">
+            <div>
+              <div class="cluster-meta-top">
+                <span>PILLAR_02</span>
+                <span>AI / ML</span>
+              </div>
+              <h3 class="cluster-title">Machine Learning &amp; AI</h3>
+              <p class="cluster-desc">
+                Foundational mathematics, Scikit-Learn pipelines, Deep Learning architectures, LLM implementations, and research paper summaries.
+              </p>
+              <div class="cluster-tags-wrap">
+                <span class="timeline-tag">Math &amp; Stats</span>
+                <span class="timeline-tag">Deep Learning</span>
+                <span class="timeline-tag">LLM Workflows</span>
+              </div>
+            </div>
+            <div class="cluster-node-footer">
+              <a href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer" class="accent-teal-text">OPEN ON MY ILM ↗</a>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="vault-cluster-card">
+            <div>
+              <div class="cluster-meta-top">
+                <span>PILLAR_03</span>
+                <span>REVISION</span>
+              </div>
+              <h3 class="cluster-title">Comprehensive PDF Notes</h3>
+              <p class="cluster-desc">
+                Handcrafted, high-yield digital notes and quick-revision summaries formatted for rapid recall and exam/interview preparation.
+              </p>
+              <div class="cluster-tags-wrap">
+                <span class="timeline-tag">Handwritten Guides</span>
+                <span class="timeline-tag">Cheat Sheets</span>
+                <span class="timeline-tag">Quick Revision</span>
+              </div>
+            </div>
+            <div class="cluster-node-footer">
+              <a href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer" class="accent-teal-text">OPEN ON MY ILM ↗</a>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="vault-cluster-card">
+            <div>
+              <div class="cluster-meta-top">
+                <span>PILLAR_04</span>
+                <span>VIDEOS</span>
+              </div>
+              <h3 class="cluster-title">Curated Video Lectures</h3>
+              <p class="cluster-desc">
+                Handpicked high-yield lecture series and conceptual deep dives from leading educators and world-class universities with topic timestamps.
+              </p>
+              <div class="cluster-tags-wrap">
+                <span class="timeline-tag">Lecture Series</span>
+                <span class="timeline-tag">Concept Breakdowns</span>
+                <span class="timeline-tag">Topic Playlists</span>
+              </div>
+            </div>
+            <div class="cluster-node-footer">
+              <a href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer" class="accent-teal-text">OPEN ON MY ILM ↗</a>
+            </div>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div class="vault-cluster-card">
+            <div>
+              <div class="cluster-meta-top">
+                <span>PILLAR_05</span>
+                <span>CORE CS</span>
+              </div>
+              <h3 class="cluster-title">CS Core &amp; System Design</h3>
+              <p class="cluster-desc">
+                Essential foundations covering Operating Systems, Database Internals, Computer Networks, and Low-to-High-Level System Design.
+              </p>
+              <div class="cluster-tags-wrap">
+                <span class="timeline-tag">OS &amp; Networks</span>
+                <span class="timeline-tag">DBMS Internals</span>
+                <span class="timeline-tag">System Architecture</span>
+              </div>
+            </div>
+            <div class="cluster-node-footer">
+              <a href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer" class="accent-teal-text">OPEN ON MY ILM ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 05 // FEATURED PROJECTS (ALL PROJECTS WITH SCREENSHOTS)           -->
+    <!-- ================================================================= -->
+    <section class="atelier-section" id="projects">
+      <div class="section-grid" style="margin-bottom: 2.5rem">
+        <div class="section-index-col">
+          <span class="section-big-index">05</span>
+          <span class="section-tag-label">// PROJECTS</span>
+        </div>
+        <div style="grid-column: span 9">
+          <h2 class="section-header-title">
+            FEATURED PROJECTS
+          </h2>
+          <p class="section-header-sub">Production applications, AI platforms, and algorithmic terminals.</p>
+        </div>
+      </div>
+
+      <!-- Rich Visual Projects Grid (With All Screenshots) -->
+      <div class="projects-visual-grid" id="projects-container">
+        
+        <!-- Project 1: Junoon - Ilm -->
+        <div class="project-showcase-card">
+          <div class="project-img-container">
+            <img src="junoon_ilm.png" alt="Junoon - Ilm Project Screenshot" class="project-card-image" />
+            <div class="project-overlay-badge">
+              <span>PROJECT 01 // KNOWLEDGE VAULT</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="accent-amber-text">[WEB PLATFORM]</span>
+              <span style="color: var(--outline)">100% FREE ACCESS</span>
+            </div>
+            <h3 class="project-card-heading">Junoon - Ilm</h3>
+            <p class="project-card-description">
+              Junoon-Ilm is a minimalist, ultra-fast, developer-oriented personal educational command center and knowledge vault. It organizes links, notes, research papers, lecture series, and GitHub repositories across Machine Learning, Artificial Intelligence, Distributed Systems, Computer Science fundamentals, and engineering projects.
+            </p>
+            <div class="project-card-tech-row">
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">Flask</span>
+              <span class="timeline-tag">HTML</span>
+              <span class="timeline-tag">CSS</span>
+              <span class="timeline-tag">JS</span>
+              <span class="timeline-tag">PostgreSQL</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="accent-teal-text project-action-btn" href="https://github.com/Vijay-Junoon/junoon-ilm" target="_blank" rel="noopener noreferrer">
+                <span>[CODE ↗]</span>
+              </a>
+              <a class="accent-amber-text project-action-btn" href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer">
+                <span>[LIVE DEMO ↗]</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Opportunist -->
+        <div class="project-showcase-card">
+          <div class="project-img-container">
+            <img src="opportunist.png" alt="Opportunist Project Screenshot" class="project-card-image" />
+            <div class="project-overlay-badge">
+              <span>PROJECT 02 // ARBITRAGE TERMINAL</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="accent-amber-text">[GRAPH ALGORITHMS]</span>
+              <span style="color: var(--outline)">BELLMAN-FORD</span>
+            </div>
+            <h3 class="project-card-heading">Opportunist</h3>
+            <p class="project-card-description">
+              Opportunist is a premium, high-contrast Forex Arbitrage Terminal designed to detect negative cycles in currency exchange rates and highlight risk-free profitable loops. It implements the Bellman-Ford Algorithm over log-transformed rates to transform triangular and polygonal trades into negative sum cycles.
+            </p>
+            <div class="project-card-tech-row">
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">Graphs</span>
+              <span class="timeline-tag">Flask</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="accent-teal-text project-action-btn" href="https://github.com/Vijay-Junoon/opportunist" target="_blank" rel="noopener noreferrer">
+                <span>[CODE ↗]</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Investigo -->
+        <div class="project-showcase-card">
+          <div class="project-img-container">
+            <img src="investigo.png" alt="Investigo Project Screenshot" class="project-card-image" />
+            <div class="project-overlay-badge">
+              <span>PROJECT 03 // MULTI-AGENT AI</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="accent-amber-text">[AGENTIC RESEARCH]</span>
+              <span style="color: var(--outline)">AUTONOMOUS SYNTHESIS</span>
+            </div>
+            <h3 class="project-card-heading">Investigo</h3>
+            <p class="project-card-description">
+              Investigo is an autonomous, multi-agent AI research platform designed to automate deep information gathering, synthesis, and publication-grade report compilation. Given a single research query, Investigo decomposes the topic into distinct sub-topics, conducts parallel web searches, normalizes findings using distributed LLM agents, and compiles a comprehensive, academic-grade Markdown and PDF research dossier.
+            </p>
+            <div class="project-card-tech-row">
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">AgenticAI</span>
+              <span class="timeline-tag">Vectorization</span>
+              <span class="timeline-tag">LLM Calls</span>
+              <span class="timeline-tag">Redis</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="accent-teal-text project-action-btn" href="https://github.com/Vijay-Junoon/Investigo" target="_blank" rel="noopener noreferrer">
+                <span>[CODE ↗]</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: unClutter -->
+        <div class="project-showcase-card">
+          <div class="project-img-container">
+            <img src="unclutter.png" alt="unClutter Project Screenshot" class="project-card-image" />
+            <div class="project-overlay-badge">
+              <span>PROJECT 04 // DOCUMENT CLUSTERING</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="accent-amber-text">[SEMANTIC CLUSTERING]</span>
+              <span style="color: var(--outline)">SCIKIT-LEARN</span>
+            </div>
+            <h3 class="project-card-heading">unClutter</h3>
+            <p class="project-card-description">
+              An AI-powered document organization system that automatically clusters and categorizes files using semantic similarity, enabling intelligent and efficient document management.
+            </p>
+            <div class="project-card-tech-row">
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">scikit-learn</span>
+              <span class="timeline-tag">Tkinter</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="accent-teal-text project-action-btn" href="https://github.com/Vijay-Junoon/unClutter" target="_blank" rel="noopener noreferrer">
+                <span>[CODE ↗]</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Tehqeeq.AI -->
+        <div class="project-showcase-card">
+          <div class="project-img-container project-placeholder-container">
+            <div class="schematic-placeholder">
+              <span class="material-symbols-outlined" style="font-size: 40px; color: var(--primary)">database</span>
+              <span style="font-family: var(--font-mono); font-size: 11px; color: var(--text-secondary); margin-top: 8px;">TEXT-TO-SQL PIPELINE</span>
+            </div>
+            <div class="project-overlay-badge">
+              <span>PROJECT 05 // SQL SYNTHESIS</span>
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-meta">
+              <span class="accent-amber-text">[NATURAL LANGUAGE TO SQL]</span>
+              <span style="color: var(--outline)">VECTOR EMBEDDINGS</span>
+            </div>
+            <h3 class="project-card-heading">Tehqeeq.AI</h3>
+            <p class="project-card-description">
+              An AI-powered Text-to-SQL application that translates natural language questions into SQL queries and retrieves accurate, structured insights from relational databases using vector embeddings and large language models.
+            </p>
+            <div class="project-card-tech-row">
+              <span class="timeline-tag">Python</span>
+              <span class="timeline-tag">PostgreSQL</span>
+              <span class="timeline-tag">Vector Embeddings</span>
+              <span class="timeline-tag">LLMs</span>
+            </div>
+            <div class="project-card-footer">
+              <a class="accent-teal-text project-action-btn" href="https://github.com/Vijay-Junoon/textToSQL" target="_blank" rel="noopener noreferrer">
+                <span>[CODE ↗]</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 06 // SKILLS & TECHNOLOGIES                                       -->
+    <!-- ================================================================= -->
+    <section class="atelier-section" id="skills">
+      <div class="section-grid" style="margin-bottom: 2rem">
+        <div class="section-index-col">
+          <span class="section-big-index">06</span>
+          <span class="section-tag-label">// SKILLS</span>
+        </div>
+        <div style="grid-column: span 9">
+          <h2 class="section-header-title">
+            SKILLS &amp; TECHNOLOGIES
+          </h2>
+          <p class="section-header-sub">Core programming languages, frameworks, and engineering tools.</p>
+        </div>
+      </div>
+
+      <div class="taxonomy-matrix" id="taxonomy-matrix">
+        <!-- Category 1: Languages -->
+        <div class="taxonomy-row">
+          <div class="taxonomy-cat-label">[LANGUAGES]</div>
+          <div class="taxonomy-items-wrap">
+            <span class="taxonomy-item">Python</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">JavaScript</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">SQL</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Frameworks -->
+        <div class="taxonomy-row">
+          <div class="taxonomy-cat-label">[FRAMEWORKS &amp; LIBS]</div>
+          <div class="taxonomy-items-wrap">
+            <span class="taxonomy-item">scikit-learn</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">tensorflow</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">pandas</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">langchain</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">langgraph</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Tools -->
+        <div class="taxonomy-row">
+          <div class="taxonomy-cat-label">[TOOLS &amp; INFRASTRUCTURE]</div>
+          <div class="taxonomy-items-wrap">
+            <span class="taxonomy-item">Git &amp; GitHub</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">Docker</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">MongoDB</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">PostgreSQL</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">MLFlow</span>
+            <span class="taxonomy-slash">/</span>
+            <span class="taxonomy-item">DVC</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 07 // TECHNICAL STATISTICS (BENTO TELEMETRY)                      -->
+    <!-- ================================================================= -->
+    <section class="atelier-section" id="stats">
+      <div class="section-grid" style="margin-bottom: 2rem">
+        <div class="section-index-col">
+          <span class="section-big-index">07</span>
+          <span class="section-tag-label">// STATS</span>
+        </div>
+        <div style="grid-column: span 9">
+          <h2 class="section-header-title">
+            TECHNICAL STATISTICS
+          </h2>
+          <p class="section-header-sub">Verified engineering metrics, competitive problem solving, and version telemetry.</p>
+        </div>
+      </div>
+
+      <!-- High-Contrast Telemetry Bento Grid -->
+      <div class="stats-bento-grid">
+        
+        <!-- LeetCode Interactive Card -->
+        <div class="bento-telemetry-card leetcode-card">
+          <div class="bento-card-header">
+            <div class="bento-title-group">
+              <span class="material-symbols-outlined accent-amber-text">code</span>
+              <h3>LeetCode</h3>
+            </div>
+            <span class="telemetry-badge-pill" id="leetcode-ranking">Top 5%</span>
+          </div>
+
+          <div class="leetcode-grid-body">
+            <div class="progress-ring-container">
+              <svg class="progress-ring-svg" viewBox="0 0 100 100">
+                <circle class="ring-bg" cx="50" cy="50" r="40"></circle>
+                <circle class="ring-fill" cx="50" cy="50" r="40" id="lc-progress-circle"></circle>
+              </svg>
+              <div class="ring-center-content">
+                <span class="ring-big-num" id="lc-solved-num">517</span>
+                <span class="ring-sub-label">Solved</span>
+              </div>
+            </div>
+
+            <div class="leetcode-bars-column">
+              <!-- Easy -->
+              <div class="difficulty-bar-group">
+                <div class="difficulty-meta">
+                  <span class="diff-tag easy-tag">Easy</span>
+                  <span class="diff-val" id="lc-easy-count">232 / 962</span>
                 </div>
-                <div class="github-stat-box">
-                  <span class="stat-name">Public Repos</span>
-                  <span class="stat-big-number" id="github-repos">0</span>
+                <div class="bar-track">
+                  <div class="bar-fill easy-fill" style="width: 24.1%"></div>
                 </div>
               </div>
 
-              <div class="github-calendar-wrapper">
-                <span class="calendar-title">Contributions Activity</span>
-                <div class="github-calendar-grid" id="github-contrib-grid">
-                  <!-- Generated grid cells for contribution heat map -->
+              <!-- Medium -->
+              <div class="difficulty-bar-group">
+                <div class="difficulty-meta">
+                  <span class="diff-tag med-tag">Medium</span>
+                  <span class="diff-val" id="lc-med-count">253 / 2109</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill med-fill" style="width: 12.0%"></div>
+                </div>
+              </div>
+
+              <!-- Hard -->
+              <div class="difficulty-bar-group">
+                <div class="difficulty-meta">
+                  <span class="diff-tag hard-tag">Hard</span>
+                  <span class="diff-val" id="lc-hard-count">32 / 971</span>
+                </div>
+                <div class="bar-track">
+                  <div class="bar-fill hard-fill" style="width: 3.3%"></div>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Coding Hours / Langs Card -->
-          <div class="bento-card coding-hours-card animate-card">
-            <div class="bento-card-header">
-              <div class="bento-card-title-group">
-                <span class="material-symbols-outlined timer-icon">timer</span>
-                <h3>Coding Activity</h3>
-              </div>
-              <span class="badge" id="coding-hours-total">0+ Hrs</span>
+          <!-- LeetCode Topic Mastery Breakdown -->
+          <div class="leetcode-skills-section">
+            <div class="lc-skills-header-row">
+              <span class="lc-skills-title">// TOPIC MASTERY</span>
+              <span class="lc-skills-subtitle">ALGORITHMIC PROBLEMS SOLVED</span>
             </div>
 
-            <div class="coding-hours-content">
-              <span class="sub-label">Language Share (WakaTime Stats)</span>
-              <div class="langs-list" id="langs-progress-container">
-                <!-- Dynamically populated language breakdown -->
+            <div class="lc-skills-tiers-container" id="lc-skills-container">
+              <!-- Advanced -->
+              <div class="lc-skill-tier">
+                <div class="lc-tier-label-wrap">
+                  <span class="tier-dot adv-dot"></span>
+                  <span class="tier-name">Advanced</span>
+                </div>
+                <div class="lc-tier-pills">
+                  <span class="lc-skill-pill">Dynamic Programming <span class="lc-count">x58</span></span>
+                  <span class="lc-skill-pill">Backtracking <span class="lc-count">x25</span></span>
+                  <span class="lc-skill-pill">Divide and Conquer <span class="lc-count">x17</span></span>
+                </div>
+              </div>
+
+              <!-- Intermediate -->
+              <div class="lc-skill-tier">
+                <div class="lc-tier-label-wrap">
+                  <span class="tier-dot int-dot"></span>
+                  <span class="tier-name">Intermediate</span>
+                </div>
+                <div class="lc-tier-pills">
+                  <span class="lc-skill-pill">Hash Table <span class="lc-count">x100</span></span>
+                  <span class="lc-skill-pill">Math <span class="lc-count">x69</span></span>
+                  <span class="lc-skill-pill">Tree <span class="lc-count">x67</span></span>
+                </div>
+              </div>
+
+              <!-- Fundamental -->
+              <div class="lc-skill-tier">
+                <div class="lc-tier-label-wrap">
+                  <span class="tier-dot fun-dot"></span>
+                  <span class="tier-name">Fundamental</span>
+                </div>
+                <div class="lc-tier-pills">
+                  <span class="lc-skill-pill">Array <span class="lc-count">x252</span></span>
+                  <span class="lc-skill-pill">String <span class="lc-count">x114</span></span>
+                  <span class="lc-skill-pill">Two Pointers <span class="lc-count">x82</span></span>
+                </div>
               </div>
             </div>
           </div>
+        </div>
 
+        <!-- GitHub Stats Card -->
+        <div class="bento-telemetry-card github-card">
+          <div class="bento-card-header">
+            <div class="bento-title-group">
+              <span class="material-symbols-outlined accent-teal-text">terminal</span>
+              <h3>GitHub Stats</h3>
+            </div>
+            <a href="https://github.com/Vijay-Junoon" target="_blank" rel="noopener noreferrer" class="telemetry-badge-pill">
+              <span>@Vijay-Junoon ↗</span>
+            </a>
+          </div>
+
+          <div class="github-stats-summary-row">
+            <div class="github-metric-box">
+              <span class="stat-meta-label">Contributions (YTD)</span>
+              <span class="stat-huge-number" id="github-contrib-ytd">579<span class="accent-amber-text">+</span></span>
+            </div>
+            <div class="github-metric-box">
+              <span class="stat-meta-label">Public Repos</span>
+              <span class="stat-huge-number" id="github-repos">48</span>
+            </div>
+            <div class="github-metric-box">
+              <span class="stat-meta-label">Followers</span>
+              <span class="stat-huge-number" id="github-followers">13</span>
+            </div>
+          </div>
+
+          <!-- Visual Activity Calendar Grid -->
+          <div class="github-calendar-box">
+            <span class="calendar-header-label">CONTRIBUTION HEATMAP ACTIVITY</span>
+            <div class="github-heatmap-grid" id="github-contrib-grid"></div>
+          </div>
+        </div>
+
+        <!-- Coding Activity / WakaTime Card -->
+        <div class="bento-telemetry-card coding-hours-card">
+          <div class="bento-card-header">
+            <div class="bento-title-group">
+              <span class="material-symbols-outlined accent-amber-text">timer</span>
+              <h3>Coding Activity</h3>
+            </div>
+            <span class="telemetry-badge-pill" id="coding-hours-total">850+ Hrs</span>
+          </div>
+
+          <div class="coding-activity-body">
+            <span class="stat-meta-label">Language Share (WakaTime Stats)</span>
+            
+            <div class="lang-distribution-bar">
+              <div class="lang-bar-segment python-segment" style="width: 75%" title="Python: 75%"></div>
+              <div class="lang-bar-segment js-segment" style="width: 25%" title="JavaScript: 25%"></div>
+            </div>
+
+            <div class="langs-legend-row">
+              <div class="lang-legend-item">
+                <span class="legend-color-dot python-dot"></span>
+                <span class="legend-name">Python</span>
+                <span class="legend-percent">75%</span>
+              </div>
+              <div class="lang-legend-item">
+                <span class="legend-color-dot js-dot"></span>
+                <span class="legend-name">JavaScript</span>
+                <span class="legend-percent">25%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 08 // CERTIFICATIONS                                              -->
+    <!-- ================================================================= -->
+    <section class="atelier-section" id="certifications">
+      <div class="section-grid" style="margin-bottom: 2rem">
+        <div class="section-index-col">
+          <span class="section-big-index">08</span>
+          <span class="section-tag-label">// CERTS</span>
+        </div>
+        <div style="grid-column: span 9">
+          <h2 class="section-header-title">
+            CERTIFICATIONS
+          </h2>
+          <p class="section-header-sub">Click any credential to view the verified certificate preview.</p>
+        </div>
+      </div>
+
+      <div class="credentials-list" id="credentials-container">
+        <!-- Credential 1 -->
+        <div class="credential-row cert-card" data-img="certifications/FSD/udemy_HTMLCSS.jpg" data-title="HTML &amp; CSS Complete Certificate" data-issuer="Udemy">
+          <div class="cred-title-wrap">
+            <span class="cred-idx">[01]</span>
+            <span class="cred-name">HTML &amp; CSS Complete Certificate</span>
+          </div>
+          <div class="cred-issuer-wrap">
+            <span>ISSUED: Udemy</span>
+            <span class="cred-verified-badge">[VERIFIED ACCREDITATION]</span>
+          </div>
+        </div>
+
+        <!-- Credential 2 -->
+        <div class="credential-row cert-card" data-img="certifications/FSD/udemy_JS.jpg" data-title="JavaScript Complete Certificate" data-issuer="Udemy">
+          <div class="cred-title-wrap">
+            <span class="cred-idx">[02]</span>
+            <span class="cred-name">JavaScript Complete Certificate</span>
+          </div>
+          <div class="cred-issuer-wrap">
+            <span>ISSUED: Udemy</span>
+            <span class="cred-verified-badge">[VERIFIED ACCREDITATION]</span>
+          </div>
+        </div>
+
+        <!-- Credential 3 -->
+        <div class="credential-row cert-card" data-img="certifications/ML/udemy_MachineLearning.jpg" data-title="Machine Learning A-Z Certificate" data-issuer="Udemy">
+          <div class="cred-title-wrap">
+            <span class="cred-idx">[03]</span>
+            <span class="cred-name">Machine Learning A-Z Certificate</span>
+          </div>
+          <div class="cred-issuer-wrap">
+            <span>ISSUED: Udemy</span>
+            <span class="cred-verified-badge">[VERIFIED ACCREDITATION]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================= -->
+    <!-- 09 // CONTACT & TRANSMISSION FOOTER                               -->
+    <!-- ================================================================= -->
+    <section class="transmission-section" id="contact">
+      <div style="max-width: 900px;">
+        <div class="transmission-sub-tag">// INITIATE TRANSMISSION</div>
+        <h2 class="transmission-headline">
+          LET'S BUILD SOMETHING GREAT.
+        </h2>
+        <p class="transmission-desc">
+          I build robust, scalable applications and thrive on solving complex algorithmic challenges. Available for full-time software engineering roles, backend systems development, and machine learning opportunities.
+        </p>
+
+        <!-- High-Contrast Direct Action Links -->
+        <div class="transmission-actions">
+          <a class="btn-transmission-primary" href="mailto:vijay262005@gmail.com" id="contact-email-btn">
+            [SEND EMAIL // DIRECT TRANSMISSION]
+          </a>
+          <a class="btn-transmission-secondary" href="https://github.com/Vijay-Junoon" target="_blank" rel="noopener noreferrer" id="footer-gh-link">
+            GITHUB: @VIJAY-JUNOON
+          </a>
+          <a class="btn-transmission-secondary" href="https://www.linkedin.com/in/vijay-developer" target="_blank" rel="noopener noreferrer" id="footer-li-link">
+            LINKEDIN PROFILE ↗
+          </a>
+          <a class="btn-transmission-secondary" href="https://junoon-ilm.vercel.app/" target="_blank" rel="noopener noreferrer">
+            MY ILM PLATFORM ↗
+          </a>
+        </div>
+
+        <div class="transmission-status-bar">
+          <div>V VIJAY // ASPIRING SOFTWARE ENGINEER</div>
+          <div>HYDERABAD, INDIA · SEEKING FULL-TIME OPPORTUNITIES</div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-info">
-        <span class="footer-brand" id="footer-logo">Portfolio</span>
-        <p class="footer-copyright" id="footer-copy">© 2026 Developer Portfolio. All rights reserved.</p>
-      </div>
-      <div class="footer-socials">
-        <ul class="socials-list" id="footer-socials-list">
-          <!-- Dynamically populated links -->
-        </ul>
-      </div>
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div>V VIJAY // PORTFOLIO <span style="color: var(--on-surface-variant)">[2026]</span></div>
+    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+      <span>© 2026 Developer Portfolio. All rights reserved.</span>
     </div>
   </footer>
 
