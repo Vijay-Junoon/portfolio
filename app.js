@@ -259,7 +259,12 @@ function renderPortfolio(data) {
     projectsContainer.appendChild(card);
   });
 
-  // 5. Skills Section
+  // 5. Knowledge Vault Section
+  if (data.knowledgeVault) {
+    renderKnowledgeVault(data.knowledgeVault);
+  }
+
+  // 6. Skills Section
   const skillsContainer = document.getElementById('skills-container');
   skillsContainer.innerHTML = '';
 
@@ -600,3 +605,86 @@ function initCertLightbox() {
     }
   });
 }
+
+function renderKnowledgeVault(vault) {
+  if (!vault) return;
+
+  const titleEl = document.getElementById('vault-title');
+  const badgeEl = document.getElementById('vault-badge');
+  const taglineEl = document.getElementById('vault-tagline');
+  const descEl = document.getElementById('vault-desc');
+  const liveBtn = document.getElementById('vault-live-btn');
+  const codeBtn = document.getElementById('vault-code-btn');
+  const metricsContainer = document.getElementById('vault-metrics');
+  const pillarsContainer = document.getElementById('vault-pillars-container');
+
+  if (titleEl && vault.title) titleEl.textContent = vault.title;
+  if (badgeEl && vault.badge) badgeEl.textContent = vault.badge;
+  if (taglineEl && vault.tagline) taglineEl.textContent = vault.tagline;
+  if (descEl && vault.description) descEl.textContent = vault.description;
+
+  if (liveBtn && vault.liveUrl) {
+    liveBtn.href = vault.liveUrl;
+  }
+  if (codeBtn && vault.codeUrl) {
+    codeBtn.href = vault.codeUrl;
+  }
+
+  const imgEl = document.querySelector('.vault-preview-img');
+  if (imgEl && vault.imageUrl) {
+    let imgPath = vault.imageUrl;
+    if (imgPath.startsWith('public/')) imgPath = imgPath.substring(7);
+    else if (imgPath.startsWith('/public/')) imgPath = imgPath.substring(8);
+    else if (imgPath.startsWith('./public/')) imgPath = imgPath.substring(9);
+    imgEl.src = imgPath;
+  }
+
+  // Render Metrics / Quick Stats
+  if (metricsContainer && vault.stats && vault.stats.length > 0) {
+    metricsContainer.innerHTML = '';
+    vault.stats.forEach(st => {
+      const item = document.createElement('div');
+      item.className = 'vault-metric-item';
+      item.innerHTML = `
+        <span class="metric-value">${st.value}</span>
+        <span class="metric-label">${st.label}</span>
+      `;
+      metricsContainer.appendChild(item);
+    });
+  }
+
+  // Render Learning Pillars Cards
+  if (pillarsContainer && vault.pillars && vault.pillars.length > 0) {
+    pillarsContainer.innerHTML = '';
+    vault.pillars.forEach((pillar, idx) => {
+      const card = document.createElement('a');
+      card.href = vault.liveUrl || 'https://junoon-ilm.vercel.app/';
+      card.target = '_blank';
+      card.rel = 'noopener noreferrer';
+      card.className = 'vault-pillar-card reveal';
+      card.setAttribute('aria-label', `Explore ${pillar.title} on Junoon-e-Ilm`);
+
+      const tagsHtml = (pillar.tags || []).map(t => `<span class="vault-tag-pill">${t}</span>`).join('');
+
+      card.innerHTML = `
+        <div class="pillar-card-top">
+          <div class="pillar-icon-box">
+            <span class="material-symbols-outlined">${pillar.icon || 'auto_stories'}</span>
+          </div>
+          <div class="pillar-action-indicator">
+            <span class="material-symbols-outlined">arrow_outward</span>
+          </div>
+        </div>
+        <div class="pillar-card-body">
+          <h4 class="pillar-title">${pillar.title}</h4>
+          <p class="pillar-desc">${pillar.description}</p>
+        </div>
+        <div class="pillar-tags">
+          ${tagsHtml}
+        </div>
+      `;
+      pillarsContainer.appendChild(card);
+    });
+  }
+}
+

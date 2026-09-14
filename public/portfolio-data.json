@@ -43,7 +43,8 @@
         "JS",
         "PostgreSQL"
       ],
-      "codeUrl": "https://github.com/Vijay-Junoon/junoon-ilm"
+      "codeUrl": "https://github.com/Vijay-Junoon/junoon-ilm",
+      "liveUrl": "https://junoon-ilm.vercel.app/"
     },
     {
       "title": "Opportunist",
@@ -177,5 +178,51 @@
         }
       ]
     }
+  },
+  "knowledgeVault": {
+    "title": "Junoon - Ilm",
+    "badge": "Personal Knowledge Vault",
+    "tagline": "Built with obsession. Your curated educational command center.",
+    "description": "An ultra-fast, curated knowledge repository created to organize high-yield study roadmaps, video lectures, and in-depth PDF notes across Data Structures & Algorithms, Machine Learning, AI Research, and Computer Science engineering.",
+    "liveUrl": "https://junoon-ilm.vercel.app/",
+    "codeUrl": "https://github.com/Vijay-Junoon/junoon-ilm",
+    "imageUrl": "public/junoon_ilm.png",
+    "stats": [
+      { "label": "Core Domains", "value": "DSA & ML" },
+      { "label": "Resource Types", "value": "Videos & Notes" },
+      { "label": "Access", "value": "Free & Curated" }
+    ],
+    "pillars": [
+      {
+        "icon": "account_tree",
+        "title": "Data Structures & Algorithms",
+        "description": "Comprehensive algorithmic patterns, topic-wise curated problem sheets, time/space complexity cheat sheets, and LeetCode problem trackers.",
+        "tags": ["Pattern Sheets", "LeetCode Curations", "Complexity Maps"]
+      },
+      {
+        "icon": "psychology",
+        "title": "Machine Learning & AI",
+        "description": "Foundational mathematics, Scikit-Learn pipelines, Deep Learning architectures, LLM implementations, and research paper summaries.",
+        "tags": ["Math & Stats", "Deep Learning", "LLM Workflows"]
+      },
+      {
+        "icon": "picture_as_pdf",
+        "title": "Comprehensive PDF Notes",
+        "description": "Handcrafted, high-yield digital notes and quick-revision summaries formatted for rapid recall and exam/interview preparation.",
+        "tags": ["Handwritten Guides", "Cheat Sheets", "Quick Revision"]
+      },
+      {
+        "icon": "play_circle",
+        "title": "Curated Video Lectures",
+        "description": "Handpicked high-yield lecture series and conceptual deep dives from leading educators and world-class universities with topic timestamps.",
+        "tags": ["Lecture Series", "Concept Breakdowns", "Topic Playlists"]
+      },
+      {
+        "icon": "terminal",
+        "title": "CS Core & System Design",
+        "description": "Essential foundations covering Operating Systems, Database Internals, Computer Networks, and Low-to-High-Level System Design.",
+        "tags": ["OS & Networks", "DBMS Internals", "System Architecture"]
+      }
+    ]
   }
 }
