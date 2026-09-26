@@ -95,6 +95,7 @@
     },
     {
       "title": "Tehqeeq.AI",
+      "imageUrl": "tehqeeq.png",
       "description": "An AI-powered Text-to-SQL application that translates natural language questions into SQL queries and retrieves accurate, structured insights from relational databases using vector embeddings and large language models.",
       "technologies": [
         "Python",

@@ -3,3 +3,8 @@ dist/
 .DS_Store
 *.log
 .env
+__pycache__/
+*.pyc
+*.pt
+*.partial
+*.tmp
